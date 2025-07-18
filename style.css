@@ -48,17 +48,18 @@ body {
 #btn3 {
   background-color: #a98592;
 }
-.button:hover {
+.button--active {
   transform: scale(1.2);
 }
 .text_container {
   width: 60%;
 }
 .text {
+  display: none;
   text-align: center;
   font-size: 1.6rem;
   line-height: 1.4;
 }
-.hidden {
-  display: none;
+.text--active {
+  display: block;
 }
