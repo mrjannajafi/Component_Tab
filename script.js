@@ -1,7 +1,7 @@
 const buttonContainer = document.querySelector("#container");
 const buttons = document.querySelectorAll(".button");
 const text = document.querySelectorAll(".text");
-
+const btns = document.querySelector(".button_container");
 buttonContainer.addEventListener("click", function (e) {
   // add closest method because if click child ,
   // target is button and if click ,
@@ -22,3 +22,22 @@ buttonContainer.addEventListener("click", function (e) {
 
   console.log(clicked);
 });
+
+const handleHover = function (e , opacity) {
+   if (e.target.classList.contains("button")) {
+    const link = e.target;
+    const siblings = link
+      .closest(".button_container")
+      .querySelectorAll(".button");
+    siblings.forEach((el) => {
+      if (el !== link) el.style.opacity = this;
+    });
+  }
+ 
+}
+
+btns.addEventListener("mouseover", handleHover.bind(0.5)
+);
+
+btns.addEventListener("mouseout", handleHover.bind(1)
+);
